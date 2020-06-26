@@ -1,44 +1,47 @@
-
 .cont {
     display: inline-block;
     font-family: 'Caveat', cursive;
     font-size: 1.5em;
+    
+
+    /* color: #FFFFFF;
+    background: #ece9e9; */
+    text-shadow: 1px 2px 1px #FFD9B3;
+
+
     text-align: center;
     margin: 5px;
     width: 150px;
     height: 150px;
-       
     position: relative;
     animation-name: coin_fall;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
-   
     transition: width 2s, height 2s, transform 2s;
 }
 
+@keyframes coin_fall {
+    from {
+        top: 0px;
+        transform: rotateZ(180deg);
+        transform: rotateY(360deg);
+        transform: rotateZ(360deg);
+    }
+    to {
+        top: 100px;
+        color: black;
+        transform: rotateY(0deg);
+        transform: rotateX(-50deg);
+        transform: rotateZ(-0deg);
+    }
+}
 
-  @keyframes coin_fall {
-    from {top: 0px;  transform: rotateZ(180deg); transform: rotateY(360deg); transform: rotateZ(360deg);}
-    to {top: 100px;  color: black;  transform: rotateY(0deg); transform: rotateX(-50deg); transform: rotateZ(-0deg);}
-    
-  }
-
-  .pic {
+.pic {
     width: 120px;
     height: 120px;
-    
-    transition:  transform 2s;
-  }
+    transition: transform 2s;
+}
 
 .pic:hover {
-   
     transform: rotate(180deg);
-    
 }
-
-/* .text {
-    transition:  width 2s, height 2s, transform 2s;
-}
-.text:hover {
-    transform: rotate(180deg);
-} */
