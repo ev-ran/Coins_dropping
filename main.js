@@ -41,7 +41,7 @@ let coin = {
 let bodyElement = document.querySelector('body');
 
 var i = 1;
-function myLoop() {             // to delay every step in loop
+function display20Flips_Images() {             // to delay every step in loop
     setTimeout(function () {
 
         //---------------------
@@ -66,9 +66,9 @@ function myLoop() {             // to delay every step in loop
 
         i++;
         if (i <= 20) {           //  if the counter < 20, call the loop function
-            myLoop();             //  ..  again which will trigger another 
+            display20Flips_Images();             //  ..  again which will trigger another 
         }
 
     }, 150)   // time for delay betweensteps in loop
 }
-myLoop();   
+display20Flips_Images();   
